@@ -1,0 +1,28 @@
+$padding: 20px;
+
+.buttons {
+  flex: 0 0 30px;
+  padding: $padding;
+}
+
+.end {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: .2s linear all;
+  transform: translateY(-100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2em;
+  font-weight: bold;
+  color: #900c3f;
+
+  &.show {
+    transform: translateY(0%);
+  }
+}

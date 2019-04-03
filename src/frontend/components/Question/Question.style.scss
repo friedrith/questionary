@@ -1,0 +1,70 @@
+$padding: 20px;
+$borderRadius: 10px;
+
+.Question {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  overflow: hidden;
+  transition: .2s linear all;
+
+  &.bottom {
+    transform: translateY(100%);
+  }
+
+  &.top {
+    transform: translateY(-100%);
+  }
+
+  .question {
+    flex: 1 1 auto;
+    border-radius: $borderRadius;
+    padding: $padding;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // https://colorhunt.co/palette/137525
+  }
+
+  .choices {
+    flex: 0 0 auto;
+  }
+
+  .choice {
+    font-size: 1.1em;
+    outline: none;
+    border: 0px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    background: #f2f2f5;
+    cursor: pointer;
+    padding: $padding / 1.5;
+    border-radius: $borderRadius;
+    font-family: "Open Sans", sans-serif;
+    transition: .2s linear all;
+    margin-top: 10px;
+
+    position: relative;
+    left: 0;
+
+    &:hover {
+      background: darken(#f2f2f5, 10%);
+    }
+
+    &.active {
+      left: 120%;
+    }
+  }
+}

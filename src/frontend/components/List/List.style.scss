@@ -1,0 +1,44 @@
+$padding: 20px;
+$borderRadius: 10px;
+
+.container {
+  overflow: auto;
+  padding: $padding;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.item {
+  font-size: 1.1em;
+  outline: none;
+  border: 0px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  background: #f2f2f5;
+  cursor: pointer;
+  padding: $padding / 1.5;
+  border-radius: $borderRadius;
+  font-family: "Open Sans", sans-serif;
+  transition: .2s linear all;
+  margin-top: 10px;
+
+  position: relative;
+  left: 0;
+
+  &:hover {
+    background: darken(#f2f2f5, 10%);
+  }
+
+  &.active {
+    left: 120%;
+  }
+}
